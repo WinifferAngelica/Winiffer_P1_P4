@@ -1,0 +1,6 @@
+@Winiffer_P1_P4_HostAddress = http://localhost:5225
+
+GET {{Winiffer_P1_P4_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

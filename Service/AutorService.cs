@@ -73,7 +73,7 @@ public class AutorService(IConfiguration configuration)
             return null;
 
         return new AutorRecord(
-            (int)autor.IdAutor,
+            autor.IdAutor,
             autor.Nombres,
             autor.Nacionalidad,
             DateTime.Parse(autor.FechaNacimiento),
@@ -120,7 +120,7 @@ public class AutorService(IConfiguration configuration)
     }
 
     public record AutorParse(
-    long IdAutor,
+    int IdAutor,
     string Nombres,
     string Nacionalidad,
     string FechaNacimiento,

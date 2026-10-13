@@ -51,7 +51,7 @@ public class AutorService(IConfiguration configuration)
         var listado = await connection.QueryAsync<AutorParse>(consulta);
 
             return listado.Select(a => new AutorRecord(
-           a.IdAutor,
+           (int)a.IdAutor,
            a.Nombres,
            a.Nacionalidad,
            DateTime.Parse(a.FechaNacimiento),
@@ -73,7 +73,7 @@ public class AutorService(IConfiguration configuration)
             return null;
 
         return new AutorRecord(
-            autor.IdAutor,
+            (int)autor.IdAutor,
             autor.Nombres,
             autor.Nacionalidad,
             DateTime.Parse(autor.FechaNacimiento),
@@ -120,11 +120,11 @@ public class AutorService(IConfiguration configuration)
     }
 
     public record AutorParse(
-    int IdAutor,
-    string Nombres,
-    string Nacionalidad,
-    string FechaNacimiento,
-    double Sueldo
+        long IdAutor,
+        string Nombres,
+        string Nacionalidad,
+        string FechaNacimiento,
+        double Sueldo
     );
 
 

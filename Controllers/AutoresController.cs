@@ -6,7 +6,7 @@ namespace Winiffer_P1_P4.Controllers;
 
 [ApiController]
 [Route("api/[controller]")]
-public class AutorController(AutorService autorService) : ControllerBase
+public class AutoresController(AutorService autorService) : ControllerBase
 {
     [HttpPost]
     public async Task<IActionResult> SaveAsync(AutorRecord autor)
